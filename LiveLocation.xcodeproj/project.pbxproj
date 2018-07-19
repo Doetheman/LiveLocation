@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6F51CABCF30ABE01E1F3800 /* libPods-LiveLocationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9654FCEF7CF06D620FDC9C1 /* libPods-LiveLocationTests.a */; };
+		D326F6B4B02E8ECDAF9B4B93 /* libPods-LiveLocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF5C037132DF9D9CC933D3B /* libPods-LiveLocation.a */; };
+		D467600F69668F7DDFE8D8F4 /* libPods-LiveLocationUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F95F578D3105351B5772453 /* libPods-LiveLocationUITests.a */; };
 		FF608E3A20FF15FB00D28F16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF608E3920FF15FB00D28F16 /* AppDelegate.m */; };
 		FF608E3D20FF15FB00D28F16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF608E3C20FF15FB00D28F16 /* ViewController.m */; };
 		FF608E4020FF15FB00D28F16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF608E3E20FF15FB00D28F16 /* Main.storyboard */; };
@@ -15,6 +18,10 @@
 		FF608E4820FF15FC00D28F16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF608E4720FF15FC00D28F16 /* main.m */; };
 		FF608E5220FF15FC00D28F16 /* LiveLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF608E5120FF15FC00D28F16 /* LiveLocationTests.m */; };
 		FF608E5D20FF15FC00D28F16 /* LiveLocationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF608E5C20FF15FC00D28F16 /* LiveLocationUITests.m */; };
+		FF608E6C20FF191F00D28F16 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF608E6B20FF191F00D28F16 /* MapKit.framework */; };
+		FF608E6E20FF1D6500D28F16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF608E6D20FF1D6500D28F16 /* GoogleService-Info.plist */; };
+		FFCB2DEF20FFE01700DFD21F /* WPAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FFCB2DEE20FFE01700DFD21F /* WPAnnotation.m */; };
+		FFCB2DF520FFF5EA00DFD21F /* UserLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = FFCB2DF420FFF5EA00DFD21F /* UserLocations.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		007CF401AAC17E9BEE6F3C56 /* Pods-LiveLocationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveLocationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveLocationTests/Pods-LiveLocationTests.release.xcconfig"; sourceTree = "<group>"; };
+		22C6B5EE7CDDDD78BA0CEF35 /* Pods-LiveLocationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveLocationUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveLocationUITests/Pods-LiveLocationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		25917C0B84F90919239B052E /* Pods-LiveLocationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveLocationUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveLocationUITests/Pods-LiveLocationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F95F578D3105351B5772453 /* libPods-LiveLocationUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LiveLocationUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69D9DA2D363B28C56A84DFB0 /* Pods-LiveLocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveLocation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveLocation/Pods-LiveLocation.debug.xcconfig"; sourceTree = "<group>"; };
+		7DEC8094D36D5F162E2FDE5B /* Pods-LiveLocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveLocation.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveLocation/Pods-LiveLocation.release.xcconfig"; sourceTree = "<group>"; };
+		CC8E1F7E085CFD503847CC9A /* Pods-LiveLocationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveLocationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveLocationTests/Pods-LiveLocationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DEF5C037132DF9D9CC933D3B /* libPods-LiveLocation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LiveLocation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9654FCEF7CF06D620FDC9C1 /* libPods-LiveLocationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LiveLocationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF608E3520FF15FB00D28F16 /* LiveLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF608E3820FF15FB00D28F16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FF608E3920FF15FB00D28F16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +67,12 @@
 		FF608E5820FF15FC00D28F16 /* LiveLocationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveLocationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF608E5C20FF15FC00D28F16 /* LiveLocationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveLocationUITests.m; sourceTree = "<group>"; };
 		FF608E5E20FF15FC00D28F16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF608E6B20FF191F00D28F16 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FF608E6D20FF1D6500D28F16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FFCB2DED20FFE01700DFD21F /* WPAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPAnnotation.h; sourceTree = "<group>"; };
+		FFCB2DEE20FFE01700DFD21F /* WPAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPAnnotation.m; sourceTree = "<group>"; };
+		FFCB2DF320FFF5EA00DFD21F /* UserLocations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserLocations.h; sourceTree = "<group>"; };
+		FFCB2DF420FFF5EA00DFD21F /* UserLocations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserLocations.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF608E6C20FF191F00D28F16 /* MapKit.framework in Frameworks */,
+				D326F6B4B02E8ECDAF9B4B93 /* libPods-LiveLocation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6F51CABCF30ABE01E1F3800 /* libPods-LiveLocationTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +97,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D467600F69668F7DDFE8D8F4 /* libPods-LiveLocationUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB71C99A1DA9AC714F7C2CC5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69D9DA2D363B28C56A84DFB0 /* Pods-LiveLocation.debug.xcconfig */,
+				7DEC8094D36D5F162E2FDE5B /* Pods-LiveLocation.release.xcconfig */,
+				CC8E1F7E085CFD503847CC9A /* Pods-LiveLocationTests.debug.xcconfig */,
+				007CF401AAC17E9BEE6F3C56 /* Pods-LiveLocationTests.release.xcconfig */,
+				25917C0B84F90919239B052E /* Pods-LiveLocationUITests.debug.xcconfig */,
+				22C6B5EE7CDDDD78BA0CEF35 /* Pods-LiveLocationUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FF608E2C20FF15FB00D28F16 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +124,8 @@
 				FF608E5020FF15FC00D28F16 /* LiveLocationTests */,
 				FF608E5B20FF15FC00D28F16 /* LiveLocationUITests */,
 				FF608E3620FF15FB00D28F16 /* Products */,
+				FF608E6A20FF191F00D28F16 /* Frameworks */,
+				FB71C99A1DA9AC714F7C2CC5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +142,7 @@
 		FF608E3720FF15FB00D28F16 /* LiveLocation */ = {
 			isa = PBXGroup;
 			children = (
+				FFCB2DE820FFBFF400DFD21F /* Model */,
 				FF608E3820FF15FB00D28F16 /* AppDelegate.h */,
 				FF608E3920FF15FB00D28F16 /* AppDelegate.m */,
 				FF608E3B20FF15FB00D28F16 /* ViewController.h */,
@@ -109,6 +151,7 @@
 				FF608E4120FF15FC00D28F16 /* Assets.xcassets */,
 				FF608E4320FF15FC00D28F16 /* LaunchScreen.storyboard */,
 				FF608E4620FF15FC00D28F16 /* Info.plist */,
+				FF608E6D20FF1D6500D28F16 /* GoogleService-Info.plist */,
 				FF608E4720FF15FC00D28F16 /* main.m */,
 			);
 			path = LiveLocation;
@@ -132,6 +175,28 @@
 			path = LiveLocationUITests;
 			sourceTree = "<group>";
 		};
+		FF608E6A20FF191F00D28F16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF608E6B20FF191F00D28F16 /* MapKit.framework */,
+				DEF5C037132DF9D9CC933D3B /* libPods-LiveLocation.a */,
+				E9654FCEF7CF06D620FDC9C1 /* libPods-LiveLocationTests.a */,
+				4F95F578D3105351B5772453 /* libPods-LiveLocationUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFCB2DE820FFBFF400DFD21F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFCB2DED20FFE01700DFD21F /* WPAnnotation.h */,
+				FFCB2DEE20FFE01700DFD21F /* WPAnnotation.m */,
+				FFCB2DF320FFF5EA00DFD21F /* UserLocations.h */,
+				FFCB2DF420FFF5EA00DFD21F /* UserLocations.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +204,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF608E6120FF15FC00D28F16 /* Build configuration list for PBXNativeTarget "LiveLocation" */;
 			buildPhases = (
+				B67A0C582D368055BEB449AB /* [CP] Check Pods Manifest.lock */,
 				FF608E3120FF15FB00D28F16 /* Sources */,
 				FF608E3220FF15FB00D28F16 /* Frameworks */,
 				FF608E3320FF15FB00D28F16 /* Resources */,
@@ -156,6 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF608E6420FF15FC00D28F16 /* Build configuration list for PBXNativeTarget "LiveLocationTests" */;
 			buildPhases = (
+				115C1478B990DFDEBD44B095 /* [CP] Check Pods Manifest.lock */,
 				FF608E4920FF15FC00D28F16 /* Sources */,
 				FF608E4A20FF15FC00D28F16 /* Frameworks */,
 				FF608E4B20FF15FC00D28F16 /* Resources */,
@@ -174,6 +241,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF608E6720FF15FC00D28F16 /* Build configuration list for PBXNativeTarget "LiveLocationUITests" */;
 			buildPhases = (
+				AEFE6FF10C8D76B50C9BED62 /* [CP] Check Pods Manifest.lock */,
 				FF608E5420FF15FC00D28F16 /* Sources */,
 				FF608E5520FF15FC00D28F16 /* Frameworks */,
 				FF608E5620FF15FC00D28F16 /* Resources */,
@@ -236,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF608E4520FF15FC00D28F16 /* LaunchScreen.storyboard in Resources */,
+				FF608E6E20FF1D6500D28F16 /* GoogleService-Info.plist in Resources */,
 				FF608E4220FF15FC00D28F16 /* Assets.xcassets in Resources */,
 				FF608E4020FF15FB00D28F16 /* Main.storyboard in Resources */,
 			);
@@ -257,14 +326,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		115C1478B990DFDEBD44B095 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LiveLocationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEFE6FF10C8D76B50C9BED62 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LiveLocationUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B67A0C582D368055BEB449AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LiveLocation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FF608E3120FF15FB00D28F16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFCB2DF520FFF5EA00DFD21F /* UserLocations.m in Sources */,
 				FF608E3D20FF15FB00D28F16 /* ViewController.m in Sources */,
 				FF608E4820FF15FC00D28F16 /* main.m in Sources */,
 				FF608E3A20FF15FB00D28F16 /* AppDelegate.m in Sources */,
+				FFCB2DEF20FFE01700DFD21F /* WPAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +559,7 @@
 		};
 		FF608E6220FF15FC00D28F16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69D9DA2D363B28C56A84DFB0 /* Pods-LiveLocation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +577,7 @@
 		};
 		FF608E6320FF15FC00D28F16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DEC8094D36D5F162E2FDE5B /* Pods-LiveLocation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -465,6 +595,7 @@
 		};
 		FF608E6520FF15FC00D28F16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC8E1F7E085CFD503847CC9A /* Pods-LiveLocationTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -484,6 +615,7 @@
 		};
 		FF608E6620FF15FC00D28F16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 007CF401AAC17E9BEE6F3C56 /* Pods-LiveLocationTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -503,6 +635,7 @@
 		};
 		FF608E6820FF15FC00D28F16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25917C0B84F90919239B052E /* Pods-LiveLocationUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QLD4D8MBQ8;
@@ -521,6 +654,7 @@
 		};
 		FF608E6920FF15FC00D28F16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22C6B5EE7CDDDD78BA0CEF35 /* Pods-LiveLocationUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QLD4D8MBQ8;

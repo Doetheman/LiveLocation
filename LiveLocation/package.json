@@ -1,0 +1,23 @@
+{
+  "name": "livelocation",
+  "version": "1.0.0",
+  "description": "LiveLocation",
+  "main": "appLocation.js",
+  "dependencies": {
+    "firebase-admin": "^5.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Doetheman/LiveLocation.git"
+  },
+  "author": "Dorian Holmes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Doetheman/LiveLocation/issues"
+  },
+  "homepage": "https://github.com/Doetheman/LiveLocation#readme"
+}

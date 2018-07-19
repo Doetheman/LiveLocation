@@ -5,11 +5,10 @@
 //  Created by Dorian Holmes on 7/17/18.
 //  Copyright © 2018 Dorian Holmes. All rights reserved.
 //
-
+@import Firebase;
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
@@ -17,6 +16,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [FIRApp configure];
+    //FIRDatabaseReference *ref = [[FIRDatabase database] reference];
+
     return YES;
 }
 
