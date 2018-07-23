@@ -16,6 +16,7 @@
 @property(nonatomic, readwrite) CLLocationDegrees latitude;
 @property(nonatomic, readwrite) CLLocationDegrees longitude;
 @property(nonatomic, copy, readwrite) NSString *name;
+@property MKPointAnnotation *pinAnnotation;
 
 +(NSArray<UserLocations *> *)locationConverter: (FIRDataSnapshot *) snapshot;
 

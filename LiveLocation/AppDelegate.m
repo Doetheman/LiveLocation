@@ -17,8 +17,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [FIRApp configure];
-    //FIRDatabaseReference *ref = [[FIRDatabase database] reference];
-
     return YES;
 }
 

@@ -11,14 +11,18 @@
 @interface ViewController ()
 @property NSMutableDictionary *pins;
 @property FIRDataSnapshot *updatedLocations;
+@property NSArray *lat;
+@property NSArray *lon;
+@property (strong, nonatomic) NSString *key;
+@property NSArray<UserLocations*> *locArray;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    [super viewDidLoad];
+   
     self.locationManager = [[CLLocationManager alloc] init];
     //Firebase data reference
     self.ref = [[FIRDatabase database] reference];
@@ -31,58 +35,63 @@
     
     [self.locationManager requestAlwaysAuthorization];
     if( [CLLocationManager locationServicesEnabled]){
+        
         [self.locationManager startUpdatingLocation];
-        //zoom to user coordinates
-        [self.map setMapType:MKMapTypeStandard];
-        [self.map setZoomEnabled:YES];
-        self.map.centerCoordinate = self.currentLocation.coordinate;
     }
     //get data from firebase and update users locations
     [[self.ref child:@"users"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        //stores snapshot
         self.updatedLocations = snapshot;
+        //Calls method in UserLocation file
         NSArray<UserLocations *> *userLocations = [UserLocations locationConverter:snapshot];
-        [self layoutPinsForUserLocations:userLocations];
         
+        //pins locations
+        [self layoutPinsForUserLocations:userLocations];
+
     }];
+    [self.map setMapType:MKMapTypeStandard];
+    [self.map setZoomEnabled:YES];
+    self.map.centerCoordinate = self.currentLocation.coordinate;
+    //Timer to update location
+    [self allowDeferredLocationUpdatesUntilTraveled: 1 timeout:5];
 
+ }
+
+//update users lat and long data in Firebase
+- (void)updateFireBase: (FIRDatabaseReference*)ref latitude:(NSNumber*)latitude longitude:(NSNumber*)longitude{
+    [[ref child:@"lat"] setValue: latitude.stringValue];
+    [[ref child:@"long"] setValue: longitude.stringValue];
 }
 
--(void)testUpdatingLocation:(FIRDataSnapshot *) snapshot{
-    NSDictionary *users = snapshot.value;
-     NSArray<NSString *>* allUsers = users.allKeys;
-    for (NSString *user in allUsers) {
-        //    NSDictionary <NSString *, NSNumber *> *location = users[user][@"location"];
- 
-    [[NSURLSession sharedSession] dataTaskWithURL: NSURL URLWithString:@"https://livelocation-bc32d.firebaseio.com/users.json"]
-     }
-//    Past failures
-//    NSDictionary *users = snapshot.value;
-//    NSArray<NSString *>* allUsers = users.allKeys;
-//    for (NSString *user in allUsers) {
-//    NSDictionary <NSString *, NSNumber *> *location = users[user][@"location"];
-//        NSString *update =
-//        float lat = location[@"lat"].floatValue + 0.5;
-//        float lon = location[@"long"].floatValue + 0.5;
-//        [[[[self.ref child: @"users"] child:user ] child:@"location"] setValue:lat];
-
-         
-
-}
-
+//Updates location
 -(void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
     NSLog(@"Update Locations");
-    self.currentLocation = [locations lastObject];
+    self.currentLocation = [locations lastObject]; 
     MKCoordinateRegion region = { { 0.0, 0.0 }, { 0.0, 0.0 } };
+    //Storing data in variables to be used in updateFireBase function
+    NSNumber *lat = [NSNumber numberWithDouble: self.currentLocation.coordinate.latitude];
+    NSNumber *lon = [NSNumber numberWithDouble: self.currentLocation.coordinate.longitude];
+    FIRDatabaseReference *userRef =[[self.ref child:@"users"] child:@"1"];
+    // Calling function to update Firebase data
+    [self updateFireBase:userRef latitude:lat longitude:lon];
+    //Region to be zoomed in
     region.center.latitude = self.currentLocation.coordinate.latitude;
     region.center.longitude = self.currentLocation.coordinate.longitude;
     region.span.latitudeDelta = 0.005f;
     region.span.longitudeDelta = 0.005f;
     [self.map setRegion:region animated:YES];
-    self.map.showsUserLocation = YES;
-    
+    //shows current user
+    [self.map setShowsUserLocation:YES];
     //Update users location
 }
-//pins locations
+
+//Acts as a timer to update locations
+- (void)allowDeferredLocationUpdatesUntilTraveled:(CLLocationDistance)distance
+                                          timeout:(NSTimeInterval)timeout{
+    [self.locationManager startUpdatingLocation];
+
+}
+//pin 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
     if ([annotation isKindOfClass: [MKUserLocation class]])
@@ -99,16 +108,15 @@
     return pinAnnotationView;
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 //Remove all pins on map then add new ones
-- (void)layoutPinsForUserLocations:(NSArray <UserLocations *>*)userLocations
-{
-    [self.map removeAnnotations:userLocations];
+- (void)layoutPinsForUserLocations:(NSArray <UserLocations *>*)userLocations{
+    
+    [self.map removeAnnotations:self.map.annotations];
     [self.map addAnnotations: userLocations];
     
 }
